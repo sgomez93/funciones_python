@@ -46,7 +46,14 @@ Cada valor generado lo debe guardar en una lista, recuerde:
 
 Finalmente dicha función debe retornar la lista de elementos random generados.
 '''
+def lista_aleatoria (inicio, fin, cantidad):
+    lista = []
+    while cantidad != 0:
+        numero = random.randint(inicio, fin)
+        lista.append(numero)
+        cantidad -= 1
 
+    return lista
 # --------------------------------
 # Aquí dentro definir la función lista_aleatoria
 
@@ -62,11 +69,11 @@ if __name__ == '__main__':
 
     # Alumno: Luego de crear la función invocarla en este lugar:
 
-    # mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
+    mi_lista_aleatoria = lista_aleatoria(inicio, fin, cantidad)
 
     # Imprimir en pantalla "mi_lista_aleatoria" que tendrá
     # los valores retornado por la función lista_aleatoria:
 
-    # print(mi_lista_aleatoria)
+    print(mi_lista_aleatoria)
 
     print("terminamos")
